@@ -1,0 +1,29 @@
+{% extends 'front/base.html' %} {% block content %}
+<br><br><br>
+<div class="wrapper">
+    <!-- <div class="page-header" style="background-image: url('../assets/img/sections/bruno-abatti.jpg');"> -->
+    <div class="filter"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6 ml-auto mr-auto">
+                <div class="btn btn-round btn-white">
+                    <h3 class="card-title">𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗔𝗥𝗧 𝗚𝗔𝗟𝗟𝗘𝗥𝗬</h3>
+                    <form class="register-form" method="POST">
+                        {% csrf_token %}
+                        <label>Nama Pengguna</label>
+                        <input name="username" type="text" class="form-control no-border" placeholder="Name">
+                        <label>Kata Sandi</label>
+                        <input name=password type="password" class="form-control no-border" placeholder="Password">
+                        <button class="btn btn-round btn-block btn-round">Masuk</button>
+                    </form>
+                    <div class="forgot">
+                        <a href="#paper-kit" class="btn btn-link btn-info">Forget Password?</a>
+                        <a href="{% url 'registrasi' %}" class="btn btn-link btn-info">Register?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock content %}

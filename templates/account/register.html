@@ -1,0 +1,45 @@
+{% extends 'front/base.html' %} {% block content %}
+<br><br><br>
+<div class="wrapper">
+    <!-- <div class="page-header" style="background-image: url('../assets/img/sections/bruno-abatti.jpg');"> -->
+    <div class="filter"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6 ml-auto mr-auto">
+                <div class="btn btn-round btn-round">
+                    <h3 class="card-title">𝗙𝗢𝗥𝗠 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗦𝗜</h3>
+                    <form class="register-form" method="POST">
+                        {% csrf_token %}
+                        <label>Nama Pengguna</label>
+                        <input name="username" type="text" class="form-control no-border" placeholder=" masukkan nama pengguna">
+
+                        <label>Kata Sandi</label>
+                        <input name=password type="password" class="form-control no-border" placeholder="masukkan kata sandi anda">
+
+                        <label>Nama Depan</label>
+                        <input name="nama_depan" type="text" class="form-control no-border" placeholder="masukkan nama depan">
+
+                        <label>Nama Belakang</label>
+                        <input name="nama_belakang" type="text" class="form-control no-border" placeholder="masukkan nama belakang">
+
+                        <label>E-Mail</label>
+                        <input name="email" type="email" class="form-control no-border" placeholder="masukkan e-mail">
+
+                        <label>Alamat</label>
+                        <textarea class="form-control no-border" name="alamat" id="" cols="30" rows="10"></textarea>
+
+                        <label>Telphone</label>
+                        <input name="telp" type="text" class="form-control no-border" placeholder="masukkan nomor telpon pengguna">
+
+                        <button class="btn btn-round btn-block btn-round">Registrasi</button>
+                    </form>
+                    <div class="forgot">
+                        <a href="{% url 'login' %}" class="btn btn-link btn-info">Kembali?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock content %}
